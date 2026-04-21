@@ -1,4 +1,4 @@
-import { Bell, Search } from "lucide-react";
+﻿import { Bell, Search } from "lucide-react";
 import { AIChatbot } from "@/components/app/ai-chatbot";
 import Link from "next/link";
 import { Logo } from "@/components/shared/logo";
@@ -13,6 +13,7 @@ const navItems = [
   { href: "/scam-checker", label: "Scam Checker" },
   { href: "/resume-checker", label: "Resume Checker" },
   { href: "/mock-interview", label: "Mock Interview" },
+  { href: "/peer-interview", label: "Peer Interview" },
 ];
 
 export function AppShell({
