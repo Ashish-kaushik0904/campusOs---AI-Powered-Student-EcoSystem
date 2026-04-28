@@ -1,8 +1,5 @@
 # CampusOS - AI Student Ecosystem
 
-> ### 👨‍💻 Team Members  
-> **Ashish** • **Ishwar Kumar** • **Manpreet Singh** • **Anuj Rawat**
-
 CampusOS is a production-style web application for students that combines trusted digital identity, AI-powered resource discovery, scam detection, and a verified jobs ecosystem into one modern platform.
 
 ## Stack
