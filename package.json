@@ -19,5 +19,8 @@
     "@tensorflow-models/face-landmarks-detection": "^1.0.6",
     "@tensorflow/tfjs": "^4.22.0",
     "react-webcam": "^7.2.0"
+  },
+  "devDependencies": {
+    "lightningcss": "^1.32.0"
   }
 }
