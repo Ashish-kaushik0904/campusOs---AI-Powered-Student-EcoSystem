@@ -1,13 +1,19 @@
+﻿import http from "http";
 import { app } from "./app";
 import { connectDatabase } from "./config/database";
 import { env } from "./config/env";
 import { logger } from "./utils/logger";
+import { initSocketServer } from "./socket";
 
 async function bootstrap() {
   await connectDatabase();
 
-  app.listen(env.PORT, () => {
+  const httpServer = http.createServer(app);
+  initSocketServer(httpServer, env.CLIENT_URL);
+
+  httpServer.listen(env.PORT, () => {
     logger.info(`CampusOS API running on http://localhost:${env.PORT}`);
+    logger.info(`Socket.IO signaling server ready`);
   });
 }
 
