@@ -29,15 +29,15 @@ const VIDEO_MAP = {
   "default": { title: "CS Fundamentals", url: "https://www.youtube.com/c/freecodecamp", channel: "freeCodeCamp" },
 };
 
-function getVideo(task) {
+function getVideo(task: string) {
   const t = (task || "").toLowerCase();
   for (const key of Object.keys(VIDEO_MAP)) {
-    if (key !== "default" && t.includes(key)) return VIDEO_MAP[key];
+    if (key !== "default" && t.includes(key)) return VIDEO_MAP[key as keyof typeof VIDEO_MAP];
   }
   return VIDEO_MAP["default"];
 }
 
-async function analyzeResume(text, role) {
+async function analyzeResume(text: string, role: string) {
   const targetRole = role || "Software Engineer";
   const fmt = {
     score: 75,
@@ -74,7 +74,7 @@ export default function ResumeCheckerPage() {
   const [error, setError] = useState("");
   const [activeTab, setActiveTab] = useState("overview");
 
-  const handleFile = (e) => {
+  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files && e.target.files[0];
     if (!file) return;
     const reader = new FileReader();
